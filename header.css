@@ -1,0 +1,49 @@
+/* 기본 스타일 시트 초기화 코드 */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+a, a:link, a:visited{
+    color:inherit;
+    text-decoration:none;
+}
+
+li{
+    list-style:none;
+}
+
+/*header css*/
+.container{
+    /* container class가 있는 div 태그는 기준 너비를 유지하는 역할을 함 */
+    width:1140px;
+    margin:0 auto;
+}
+
+header{
+    /* position 속성
+    fixed로 지정하면 헤더가 화면을 내리더리도 상단에 고정됨
+    그러나 fixed로 지정하면 부드러워지지 않아 일단 absolute로 지정함
+    absolute는 position:static 속성(relative, absolute, fixed)을 가지고 있지 않은 조상을 기준으로 움직임
+    */
+    position:absolute;
+    color:black;
+    /*
+    z-index:1
+    여기서는 헤더가 스크롤 했을 떄 안보이는 것을 막기 위함
+    */
+    z-index:1;
+    width:100%;
+    padding:1rem;
+}
+
+header .container {
+    /*
+    
+    */
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+}
